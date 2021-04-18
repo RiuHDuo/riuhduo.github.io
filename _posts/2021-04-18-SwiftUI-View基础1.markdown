@@ -8,7 +8,7 @@ fig-caption: # Add figcaption (optional)
 tags: [SwiftUI]
 ---
 
-# SwiftUI-View基础(1)
+# SwiftUI学习(1)-View基础
 
 > By **コニクマル** 04/18/2021 
 >
