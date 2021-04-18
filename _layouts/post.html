@@ -7,7 +7,7 @@ layout: main
     <div class="page-cover-image">
       <figure>
         {% if page.img contains 'http://' or page.img contains 'https://' %}
-        <img class="page-image" src={{page.img}} lt="{{page.title}}">
+        <img class="page-image" src={{page.img}} lt="{{page.title}}" >
         {% else %}
         <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}}
           alt="{{page.title}}">
