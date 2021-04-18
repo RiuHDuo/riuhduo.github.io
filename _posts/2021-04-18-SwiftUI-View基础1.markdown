@@ -20,7 +20,7 @@ tags: [SwiftUI]
 
 - 打开Xcode 新建工程, 并选择Interface为SwifUI, Life Cycle默认选项SwiftUI,这样就可用通过SwiftUI构建完整应用，也可以使用UIKit AppDelegate，xcode会自动创建传统的AppDelegate等类通过UIHostingController来加载SwiftUI组件。
 
- ![image-20210418145302335](../assets/img/image-20210418145302335.png)
+ ![image-20210418145302335](/assets/img/image-20210418145302335.png)
 
 - Xcode 会自动生成`ContentView`文件, 打开该文件就会自动生成Hello world!的代码。
 
@@ -37,7 +37,7 @@ struct ContentView: View {
 
 - 点击预览页面上方的`resume`按钮或者按option + command+ p就会出现预览界面。
 
-  <img src="../assets/img/image-20210418152506454.png" alt="image-20210418152506454" style="zoom:20%;" />
+  <img src="/assets/img/image-20210418152506454.png" alt="image-20210418152506454" style="zoom:20%;" />
 
 - 这样就完成了hello world的显示。
 
