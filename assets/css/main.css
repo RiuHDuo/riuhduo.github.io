@@ -884,7 +884,7 @@ table tfoot td {
 }
 
 .wrapper {
-  width: calc(100vw - 240px);
+  width: 100vw;
   position: relative;
 }
 
