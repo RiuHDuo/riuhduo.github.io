@@ -16,6 +16,15 @@ social-github: riuhduo # add your Github handle
 social-linkedin: # add your Linkedin handle
 social-email: # add your Email address
 
+comments:
+  gitalk: true
+  clientID: '64deac413c2baf027608'
+  secret: '02d5a8f07ecec303fb950959c7213818d0c5ecf9'
+  repo: 'riuhduo.github.io'
+  owner: 'RiuHDuo'
+  admin: 'RiuHDuo'
+  distractionFreeMode: true
+
 # Disqus
 discus-identifier: konikumaru # add your discus identifier
 
