@@ -14,7 +14,7 @@
           clientSecret: '{{ site.comments.secret }}', 
           repo: '{{ site.comments.repo }}',  //\为转移符号，实际添加的时候请将其去掉
           owner: '{{ site.comments.owner }}',
-          admin: '{{ site.comments.admin }}',
+          admin: ['{{ site.comments.admin }}'],
           distractionFreeMode: '{{ site.comments.distractionFreeMode }}'
         })
         gitalk.render('disqus_thread')
