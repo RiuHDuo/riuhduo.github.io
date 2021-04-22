@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SwiftUI学习(1)-View基础
+title: SwiftUI学习(1)-简单入门
 date: 2021-04-18 14:40:20 +0800
 description: SwiftUI View基本介绍
 img: 1.png # Add image post (optional)
