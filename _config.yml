@@ -8,7 +8,7 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: コニクマル # add your name
-author-img: avatar.webp # add your photo
+author-img: avatar.gif # add your photo
 about-author: 苦逼写代码ing # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
@@ -17,7 +17,7 @@ social-linkedin: # add your Linkedin handle
 social-email: # add your Email address
 
 # Disqus
-discus-identifier: 1c3763f8-757b-499b-8415-e8c0f98d54a0 # add your discus identifier
+discus-identifier: konikumaru # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics

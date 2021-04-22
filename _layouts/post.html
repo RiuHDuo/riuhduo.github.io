@@ -16,7 +16,7 @@ layout: main
         <figcaption>{{page.fig-caption}}</figcaption>
         {% endif %}
       </figure>
-    </div> <!-- End Page Cover Image -->
+    </div> 
     {% else %}
     {% endif %}
     <div class="wrap-content">
@@ -25,6 +25,7 @@ layout: main
         <div class="page-date"><span>{{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
       {{content | markdownify}}
-    </div> <!-- End Wrap Content -->
-  </div> <!-- End Page Content -->
-</article> <!-- End Article Page -->
+    </div>
+    {% include disqus.html %}
+  </div>
+</article>

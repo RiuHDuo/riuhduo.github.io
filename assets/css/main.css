@@ -949,7 +949,8 @@ table tfoot td {
   -webkit-border-radius: 100%;
           border-radius: 100%;
   overflow: hidden;
-  background-color: #333030;
+  background-color: transparent;
+  box-shadow: 0px 0px 15px #0000000a;
 }
 
 .about img {
