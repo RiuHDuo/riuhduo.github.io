@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SwiftUI学习(3)-布局管理(上) LazyVGird LazyHGrid基础
+title: SwiftUI学习(3)-布局管理(下) LazyVGird LazyHGrid基础
 date: 2021-04-20 18:01:20 +0800
 description: SwiftUI LazyVGird LazyHGrid学习
 img: 1.png # Add image post (optional)
