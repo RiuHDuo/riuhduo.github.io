@@ -10,9 +10,9 @@ tags: [SwiftUI]
 
 # SwiftUI学习(2)-布局管理上
 
-> By **コニクマル** 04/18/2021 
+> By **コニクマル**
 >
-> 本文使用目前最新版本的xcode 12 + macOS Big sur
+> 本文使用目前最新版本的xcode 12 + macOS Big sur + iOS14
 
 ### VStack 垂直布局
 

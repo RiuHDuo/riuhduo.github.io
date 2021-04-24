@@ -890,6 +890,7 @@ table tfoot td {
 
 .post, .article-page {
   background-color: #fff;
+  width: 100%;
 }
 
 ::-moz-selection {
