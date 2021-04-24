@@ -2,7 +2,7 @@
 layout: post
 title: SwiftUI学习(1)-简单入门
 date: 2021-04-18 14:40:20 +0800
-description: SwiftUI View基本介绍
+description: View是SwiftUI中的一个基础协议(protocol)。该协议用来渲染页面和提供页面的一些修饰器(modifier)。通过继承View协议来创建自定义View。ContentView实现了View协议中的body计算属性(computed property ). body需要返回自定义页面的内容。
 img: 1.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [SwiftUI]

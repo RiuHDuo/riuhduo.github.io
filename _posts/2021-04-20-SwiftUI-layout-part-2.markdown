@@ -2,7 +2,7 @@
 layout: post
 title: SwiftUI学习(3)-布局管理(下) LazyVGird LazyHGrid基础
 date: 2021-04-20 18:01:20 +0800
-description: SwiftUI LazyVGird LazyHGrid学习
+description: SwiftUI LazyVGrid和LazyHGrid一个是垂直格子布局，一个是水平格子布局， iOS14新增的布局管理器。这2个布局管理器也是只会渲染需要显示的子元素。
 img: 1.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [SwiftUI]
@@ -16,7 +16,7 @@ tags: [SwiftUI]
 
 ## Grid布局
 
-`LazyVGrid`和`LazyHGrid`一个是垂直格子布局，一个是水平格子布局， iOS14新增的布局管理器，和`LazyVStack`和`LazyHStack`一样都带有Lazy,表明这个2个布局管理器也是只会渲染需要显示的子元素。
+`LazyVGrid`和`LazyHGrid`一个是垂直格子布局，一个是水平格子布局， iOS14新增的布局管理器，和`LazyVStack`和`LazyHStack`一样都带有Lazy,表明这2个布局管理器也是只会渲染需要显示的子元素。
 
 ### LazyVGrid
 

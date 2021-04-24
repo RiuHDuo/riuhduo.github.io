@@ -7,7 +7,7 @@ layout: main
     <div class="page-cover-image">
       <figure>
         {% if page.img contains 'http://' or page.img contains 'https://' %}
-        <img class="page-image" src={{page.img}} lt="{{page.title}}" >
+        <img class="page-image" src={{page.img}} lt="{{page.title}}">
         {% else %}
         <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}}
           alt="{{page.title}}">
@@ -16,7 +16,7 @@ layout: main
         <figcaption>{{page.fig-caption}}</figcaption>
         {% endif %}
       </figure>
-    </div> 
+    </div>
     {% else %}
     {% endif %}
     <div class="wrap-content">
@@ -26,6 +26,23 @@ layout: main
       </header>
       {{content | markdownify}}
     </div>
-    {% include disqus.html %}
+
+    <div style="width: 100%; display: flex; flex-direction: column;margin-left:16px;margin-right:16px">
+      <div class="page__related">
+        <h4 class="page__related-title">其他相关</h4>
+        <div class="grid__wrapper">
+          {% for post in site.posts limit:4 %}
+          {% if post.id == page.id %}
+          {% continue %}
+          {% endif %}
+          {% include archive-single.html type="grid" %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div>
+        {% include disqus.html %}
+      </div>
+    </div>
   </div>
 </article>
