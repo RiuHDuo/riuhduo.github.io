@@ -13,6 +13,7 @@ tags: [SwiftUI]
 > 本文使用目前最新版本的xcode 12 + macOS Big sur + iOS14
 
 ## 理解@State
+`@State` 是一个属性修饰符符号，用于读写被SwiftUI管理的数据. 当`@State`标记的值改变了，页面会重新计算body内容。
 
 用一个简单的天气APP来说明:
 
@@ -106,6 +107,7 @@ tags: [SwiftUI]
 **SwiftUI是通过`State`来驱动, 当声明的属性用`@State`修饰后, SwiftUI会自动管理这个声明的属性，属性变化的时候会去更新，用到该属性的页面元素**
 
 ## @Binding使用
+`@Bingding`是一个属性修饰符可以用来读写其他数据来源的值。使用`@Binding`建立存储数据和使用数据的view之间的双向连接。比如修改`@Binding`修饰的值的时候会同时修改对应`@State`属性的值。
 
 - 接下来改造下个app, 添加一个新的页面把更修改天气的按钮放到新的页面上去。
 
