@@ -8,8 +8,6 @@ fig-caption: # Add figcaption (optional)
 tags: [SwiftUI]
 ---
 
-#  SwiftUI学习(4)-状态管理基础
-
 > By **コニクマル**
 >
 > 本文使用目前最新版本的xcode 12 + macOS Big sur + iOS14
