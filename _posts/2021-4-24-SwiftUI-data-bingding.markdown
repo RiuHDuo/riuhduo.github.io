@@ -8,7 +8,7 @@ fig-caption: # Add figcaption (optional)
 tags: [SwiftUI]
 ---
 
-> By **コニクマル**
+> **コニクマル**撰写
 >
 > 本文使用目前最新版本的xcode 12 + macOS Big sur + iOS14
 
@@ -73,9 +73,9 @@ tags: [SwiftUI]
             }
         }
     }
-
+  
     func changeWeather(index: Int){
-
+  
     }
   ```
 

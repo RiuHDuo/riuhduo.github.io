@@ -8,6 +8,10 @@ fig-caption: # Add figcaption (optional)
 tags: [SwiftUI]
 ---
 
+> **コニクマル**撰写
+>
+> 本文使用目前最新版本的xcode 12 + macOS Big sur + iOS14
+
 `Shape`是一个协议，可以通过这个协议绘制2D图形。`Shape`通过`foregroundColor`装饰器(modifier)填充(fill)颜色和通过`stroke`包装器来上色.
 
 ## 内置基本图形
