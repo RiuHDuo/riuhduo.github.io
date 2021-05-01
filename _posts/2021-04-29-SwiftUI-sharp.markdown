@@ -3,7 +3,7 @@ layout: post
 title: SwiftUI学习(5)-2D图形绘制
 date: 2021-04-28 20:01:20 +0800
 description: 介绍SwitfUI基本2D图形使用和绘制自定义图形。
-img: 1.png # Add image post (optional)
+img: swiftui_logo.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [SwiftUI]
 ---

@@ -3,7 +3,7 @@ layout: post
 title: SwiftUI学习(4)-状态管理基础
 date: 2021-04-24 13:01:20 +0800
 description: SwiftUI 理解State Binding使用,如果页面不会修改数据，我们可以使用不可修改的属性来存储变量。State来修饰页面需要使用的属性。Binding来修改其他页面的State属性。
-img: 1.png # Add image post (optional)
+img: swiftui_logo.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [SwiftUI]
 ---

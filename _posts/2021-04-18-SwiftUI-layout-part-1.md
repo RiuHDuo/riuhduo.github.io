@@ -3,7 +3,7 @@ layout: post
 title: SwiftUI学习(2)-布局管理(上) VStack/HStack/ZStack学习
 date: 2021-04-18 22:01:20 +0800
 description: SwiftUI VStack是将其子元素垂直排列的布局。HStack是水平排列, ZStack是在Z轴上堆叠排列。LazyVStack和LazyHStack是iOS14新引入的布局管理器, LazyVStack和LazyHStack会在元素需要显示的时候在渲染元素。
-img: 1.png # Add image post (optional)
+img: swiftui_logo.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [SwiftUI]
 ---
