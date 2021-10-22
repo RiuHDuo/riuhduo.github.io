@@ -59,7 +59,7 @@ tags: [SwiftUI]
   
   `Combine`的流程如下:
   
-  ![image-20211022152214994](/Users/riuhduo/Documents/GitHub/riuhduo.github.io/assets/img/image-20211022152214994.png)
+  ![image-20211022152214994](/assets/img/image-20211022152214994.png)
   
   - 首先订阅者请求订阅(Subscriber)
   - 然后发布者返回订阅内容(Subscription)
