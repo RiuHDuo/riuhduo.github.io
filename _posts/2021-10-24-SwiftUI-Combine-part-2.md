@@ -202,7 +202,7 @@ test.$ii.sink(receiveValue: { print("ii", $0)})
 输出如下:
 
 ```swift
-test.$i.sink(receiveValue: { print("i", $0)})
-test.$ii.sink(receiveValue: { print("ii", $0)})	
+i 1
+ii 3
 ```
 
