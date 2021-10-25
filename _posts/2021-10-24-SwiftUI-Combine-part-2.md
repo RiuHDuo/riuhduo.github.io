@@ -179,7 +179,7 @@ class Test{
 
 ```
 
-变量`i`和`ii`需要使用`@Published`属性修饰, `@Published`就标记这些属性是Publisher, 通过$来获取属性对应publisher。`@Published`修饰的属性在SwiftUI开发中比较常用, 是连接View和ViewModel的很好方式。
+变量`i`和`ii`需要使用`@Published`属性修饰, `@Published`就标记这些属性是Published, 通过$来获取属性对应publisher。`@Published`修饰的属性在SwiftUI开发中比较常用, 是连接View和ViewModel的很好方式。
 
 测试下上面的代码:
 
