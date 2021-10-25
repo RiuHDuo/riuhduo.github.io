@@ -26,12 +26,12 @@ tags: [SwiftUI]
 
 `Subject`提供了几个send方法：
 
-- send(_ :Output): 用于发送一个事件给订阅者
+- send(_ :Output): 用于发送一个事件给`Subscriber`
 - send(subscription: Subscription): 发布订阅内容给发布者
 
 Swift提供了`PassthroughSubject`和`CurrentValueSubject`两个`Subject`使用。
 
-- `PassthroughSubject`: 直接发布事件给订阅者
+- `PassthroughSubject`: 直接发布事件给`Subscriber`
 
   ```swift
   let passThrough = PassthroughSubject<Int, Never>()
@@ -51,7 +51,7 @@ Swift提供了`PassthroughSubject`和`CurrentValueSubject`两个`Subject`使用�
 
   
 
-- `CurrentValueSubject`: 初始化一个`Output`类型的值并发布给订阅者，每当发布一个事件给订阅者，这个值就会随之更新。或者更新该值也会发布事件给订阅者。
+- `CurrentValueSubject`: 初始化一个`Output`类型的值并发布给`Subscriber`，每当发布一个事件给`Subscriber`，这个值就会随之更新。或者更新该值也会发布事件给`Subscriber`。
 
   ```swift
   let currentValue = CurrentValueSubject<Int, Never>(0)
@@ -72,7 +72,7 @@ Swift提供了`PassthroughSubject`和`CurrentValueSubject`两个`Subject`使用�
 
 ## AnyPublisher
 
-有些时候并不希望然后订阅者了解发布者者的具体内容, 比如使用`PassthroughSubject`或者自定义的`Publisher`时候，并不想然后调用的地方看这个`Publisher`具体实现。这个时候可以使用eraseToAnyPublisher将Publisher转换为`AnyPublisher`来隐藏`Publihser`细节。
+有些时候并不希望然后`Subscriber`了解发布者者的具体内容, 比如使用`PassthroughSubject`或者自定义的`Publisher`时候，并不想然后调用的地方看这个`Publisher`具体实现。这个时候可以使用eraseToAnyPublisher将Publisher转换为`AnyPublisher`来隐藏`Publihser`细节。
 
 例如:
 
@@ -85,7 +85,7 @@ let publisher = passThrough.eraseToAnyPublisher()
 
 ## Cancellable
 
-`Cancellable` 是一个协议而订阅内容(Subscription)继承了这个协议，在`Part II-Subscriber`文字里，当订阅成功后会调用订阅者的`func receive(subscription: Subscription)`，这个subscription继承了`Cancellable`协议，调用`subscription.cancel()`就能订阅。
+`Cancellable` 是一个协议而订阅内容(Subscription)继承了这个协议，在`Part II-Subscriber`文字里，当订阅成功后会调用`Subscriber`的`func receive(subscription: Subscription)`，这个subscription继承了`Cancellable`协议，调用`subscription.cancel()`就能订阅。
 
 例如：
 
@@ -130,7 +130,7 @@ Received Value 1
 Received Value 2
 ```
 
-当cancel后订阅者就无法收到数据了。
+当cancel后`Subscriber`就无法收到数据了。
 
 ### AnyCancellable
 
