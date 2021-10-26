@@ -7,7 +7,7 @@ date: 2021-10-25 10:01:20 +0800
 
 description: Combine使用基础之Subject&AnyPublisher&Cancellable。
 
-img: swiftui_logo_2.png # Add image post (optional)
+img: swiftui_logo.png # Add image post (optional)
 
 fig-caption: # Add figcaption (optional)
 
