@@ -7,16 +7,16 @@ date: 2021-10-25 10:01:20 +0800
 
 description: Combine使用基础之Subject&AnyPublisher&Cancellable。
 
-img: swiftui_logo.png # Add image post (optional)
+img: swiftui_logo_2.png # Add image post (optional)
 
 fig-caption: # Add figcaption (optional)
 
 tags: [SwiftUI]
 ---
 
->  **コニクマル**撰写
+> **コニクマル**撰写
 >
->  本文使用目前最新版本的xcode 13 + macOS Big sur + iOS15
+> 本文使用目前最新版本的 xcode 13 + macOS Big sur + iOS15
 
 ## Subject(主题)
 
@@ -24,12 +24,12 @@ tags: [SwiftUI]
 
 `Subject`是一个集成`Publisher`的协议,比起`Publisher`, `Subject`提供了一些方法来发布事件。
 
-`Subject`提供了几个send方法：
+`Subject`提供了几个 send 方法：
 
-- send(_ :Output): 用于发送一个事件给`Subscriber`
+- send(\_ :Output): 用于发送一个事件给`Subscriber`
 - send(subscription: Subscription): 发布订阅内容给发布者
 
-Swift提供了`PassthroughSubject`和`CurrentValueSubject`两个`Subject`使用。
+Swift 提供了`PassthroughSubject`和`CurrentValueSubject`两个`Subject`使用。
 
 - `PassthroughSubject`: 直接发布事件给`Subscriber`
 
@@ -48,8 +48,6 @@ Swift提供了`PassthroughSubject`和`CurrentValueSubject`两个`Subject`使用�
   PassThrough Broadcast  2
   PassThrough Completion  finished
   ```
-
-  
 
 - `CurrentValueSubject`: 初始化一个`Output`类型的值并发布给`Subscriber`，每当发布一个事件给`Subscriber`，这个值就会随之更新。或者更新该值也会发布事件给`Subscriber`。
 
@@ -72,7 +70,7 @@ Swift提供了`PassthroughSubject`和`CurrentValueSubject`两个`Subject`使用�
 
 ## AnyPublisher
 
-有些时候并不希望然后`Subscriber`了解发布者者的具体内容, 比如使用`PassthroughSubject`或者自定义的`Publisher`时候，并不想然后调用的地方看这个`Publisher`具体实现。这个时候可以使用eraseToAnyPublisher将Publisher转换为`AnyPublisher`来隐藏`Publihser`细节。
+有些时候并不希望然后`Subscriber`了解发布者者的具体内容, 比如使用`PassthroughSubject`或者自定义的`Publisher`时候，并不想然后调用的地方看这个`Publisher`具体实现。这个时候可以使用 eraseToAnyPublisher 将 Publisher 转换为`AnyPublisher`来隐藏`Publihser`细节。
 
 例如:
 
@@ -81,33 +79,33 @@ let passThrough = PassthroughSubject<Int, Never>()
 let publisher = passThrough.eraseToAnyPublisher()
 ```
 
-按Optional键并点击publisher，可以看到publisher是一个 AnyPublisher<Int, Never>类型的对象。
+按 Optional 键并点击 publisher，可以看到 publisher 是一个 AnyPublisher<Int, Never>类型的对象。
 
 ## Cancellable
 
-`Cancellable` 是一个协议而订阅内容(Subscription)继承了这个协议，在`Part II-Subscriber`文字里，当订阅成功后会调用`Subscriber`的`func receive(subscription: Subscription)`，这个subscription继承了`Cancellable`协议，调用`subscription.cancel()`就能订阅。
+`Cancellable` 是一个协议而订阅内容(Subscription)继承了这个协议，在`Part II-Subscriber`文字里，当订阅成功后会调用`Subscriber`的`func receive(subscription: Subscription)`，这个 subscription 继承了`Cancellable`协议，调用`subscription.cancel()`就能订阅。
 
 例如：
 
 ```swift
 class TestSubscriber: Subscriber{
     private var subscription: Subscription? = nil
-    
+
     func receive(subscription: Subscription) {
         print("Received Subscription")
         subscription.request(.max(1))
         self.subscription = subscription
     }
-    
+
     func receive(_ input: Int) -> Subscribers.Demand {
         print("Received Value", input)
         return .unlimited
     }
-    
+
     func receive(completion: Subscribers.Completion<Never>) {
         print("Received completion")
     }
-    
+
     func cancel(){
         self.subscription?.cancel()
     }
@@ -130,13 +128,13 @@ Received Value 1
 Received Value 2
 ```
 
-当cancel后`Subscriber`就无法收到数据了。
+当 cancel 后`Subscriber`就无法收到数据了。
 
 ### AnyCancellable
 
-`AnyCancellable`是一个final class, 当class被释放了会调用改类的`cancel()`取消操作。
+`AnyCancellable`是一个 final class, 当 class 被释放了会调用改类的`cancel()`取消操作。
 
-给上面自定义的Subscriber添加一个AnyCancellable的只读对象:
+给上面自定义的 Subscriber 添加一个 AnyCancellable 的只读对象:
 
 ```swift
 ...
@@ -175,4 +173,4 @@ Received Value 2
 Cancel
 ```
 
-在doIt()函数运行完后,  `AnyCancellable`类型的c变量自动释放了。
+在 doIt()函数运行完后, `AnyCancellable`类型的 c 变量自动释放了。
