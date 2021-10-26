@@ -444,12 +444,17 @@ template {
 }
 
 .highlighter-rouge {
-  color: #ce887b;
-  font-weight: 400;
-  border: 1px solid #607D8B;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
-  padding: 0.1rem 0.5rem;
+  font-weight: normal;
+  font-family: 'Cascadia Code', Consolas, 'Noto Sans SC', 'Courier New', monospace;
+  -webkit-font-smoothing: initial;
+  margin: 0 2px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 0.92rem !important;
+  background: #f5f7f9;
+  display: inline;
+  vertical-align: bottom;
+  line-height: 1.8;
 }
 
 .highlight .hll {
