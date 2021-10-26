@@ -83,7 +83,7 @@ let publisher = passThrough.eraseToAnyPublisher()
 
 ## Cancellable
 
-`Cancellable` 是一个协议而订阅内容(Subscription)继承了这个协议，在`Part II-Subscriber`文字里，当订阅成功后会调用`Subscriber`的`func receive(subscription: Subscription)`，这个 subscription 继承了`Cancellable`协议，调用`subscription.cancel()`就能订阅。
+`Cancellable` 是一个协议而订阅内容(Subscription)继承了这个协议，在[SwiftUI学习(7)-Combine入门Part II-Subscriber](https://meatball.tech/SwiftUI-Combine-part-2/)文章里，当订阅成功后会调用`Subscriber`的`func receive(subscription: Subscription)`，这个 subscription 继承了`Cancellable`协议，调用`subscription.cancel()`就能订阅。
 
 例如：
 
