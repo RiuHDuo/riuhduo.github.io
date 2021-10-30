@@ -20,7 +20,7 @@ tags: [SwiftUI]
 
 ## Operator概述
 
-Combine框架里， `Publisher`包含非常多的Operator。`Publisher`通过一些方法转换对其发出的事件元素进行操作这个就是`Operator`。`Publisher`发布数据，然后`Opeartor`加工数据并返回一个`新的Publisher`。下面会介绍下这些操作，已助于理解和使用。
+Combine框架里， `Publisher`包含非常多的Operator。`Publisher`通过一些方法转换对其发出的事件元素进行操作这个就是`Operator`。`Publisher`发布数据，然后`Opeartor`加工数据并返回一个`新的Publisher`。下面会介绍下这些操作，以助于理解和使用。
 
 ## 元素映射(Mapping Elements)
 
@@ -30,7 +30,7 @@ Combine框架里， `Publisher`包含非常多的Operator。`Publisher`通过一
 
 `Map`操作如下图所示, 将一个每一个元素转换成另外一个:
 
-![image-20211030171142668](/Users/riuhduo/Documents/GitHub/riuhduo.github.io/assets/img/image-20211030171142668.png)
+![image-20211030171142668](/assets/img/image-20211030171142668.png)
 
 举个例子:
 
@@ -114,7 +114,7 @@ Output Completed: failure(__lldb_expr_111.TestError.error2)
 
 `replaceNil`流程如下图:
 
-![image-20211030165323997](/Users/riuhduo/Documents/GitHub/riuhduo.github.io/assets/img/image-20211030165323997.png)
+![image-20211030165323997](/assets/img/image-20211030165323997.png)
 
 举个例子:
 
@@ -151,7 +151,7 @@ output收到1， 5， 3
 
 `scan`的事件流程如下图:
 
-![image-20211030164637049](/Users/riuhduo/Documents/GitHub/riuhduo.github.io/assets/img/image-20211030164637049.png)
+![image-20211030164637049](/assets/img/image-20211030164637049.png)
 
 举个例子:
 
@@ -190,7 +190,7 @@ ouptut收到: 1 , 3, 6
 
 `filter`流程如下:
 
-![image-20211030171202605](/Users/riuhduo/Documents/GitHub/riuhduo.github.io/assets/img/image-20211030171202605.png)
+![image-20211030171202605](/assets/img/image-20211030171202605.png)
 
 举个例子:
 
@@ -224,7 +224,7 @@ output 只有2和3
 
 `compactMap`流程如下:
 
-![image-20211030172605779](/Users/riuhduo/Library/Application Support/typora-user-images/image-20211030172605779.png)
+![image-20211030172605779](/image-20211030172605779.png)
 
 举个例子:
 
@@ -260,7 +260,7 @@ output 输出1和2, Int("a")返会nil被`compactMap`过滤掉了
 
 流程如下:
 
-![image-20211030173630754](/Users/riuhduo/Documents/GitHub/riuhduo.github.io/assets/img/image-20211030173630754.png)
+![image-20211030173630754](/assets/img/image-20211030173630754.png)
 
 举个例子:
 
@@ -381,3 +381,4 @@ Output vaule: 42
 
 - 当input发出2的时候抛出异常，ouput收到替换后的值42
 - 因为发出2的时候抛出了异常, 所以收不到上。
+
