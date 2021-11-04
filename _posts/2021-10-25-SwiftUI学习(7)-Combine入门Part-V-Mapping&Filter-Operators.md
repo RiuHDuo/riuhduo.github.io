@@ -31,7 +31,7 @@ tags: [SwiftUI]
 
 将`Publisher`发布的元素收集起来，直到收到`Publisher`发出finish，再发布出一个数组出去。流程图如下:
 
-![image-20211104201157660](assets/img/image-20211104201157660.png)
+![image-20211104201157660](/assets/img/image-20211104201157660.png)
 
 举个例子：
 
@@ -88,7 +88,7 @@ Completed  failure(__lldb_expr_4.TestError.error)
 
 第一个参数是Int类型，当收到元素数量等于传入参数或者`Publisher`发出finish, 将这些元素组成一个数组发布出去。。流程图如下:
 
-![image-20211104202927831](assets/img/image-20211104202927831.png)
+![image-20211104202927831](/assets/img/image-20211104202927831.png)
 
 举个例子:
 
@@ -146,7 +146,7 @@ Completed  failure(__lldb_expr_12.TestError.error)
 
   流程图:
 
-  ![image-20211104210449202](assets/img/image-20211104210449202.png)
+  ![image-20211104210449202](/assets/img/image-20211104210449202.png)
 
   使用DispatchQueue.main.asyncAfter来延时发送数据, 如下:
 
@@ -200,7 +200,7 @@ Completed  failure(__lldb_expr_12.TestError.error)
 
    流程如下图:
 
-  ![image-20211104211223460](assets/img/image-20211104211223460.png)
+  ![image-20211104211223460](/assets/img/image-20211104211223460.png)
 
 使用DispatchQueue.main.asyncAfter来延时发送数据, 如下:
 
@@ -261,7 +261,7 @@ Received Value  [6, 7]
 
 流程如下:
 
-![image-20211104212724693](assets/img/image-20211104212724693.png)
+![image-20211104212724693](/assets/img/image-20211104212724693.png)
 
 举个例子:
 
