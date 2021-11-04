@@ -224,7 +224,7 @@ output 只有2和3
 
 `compactMap`流程如下:
 
-![image-20211030172605779](/assets/img/image-20211030172605779.png)
+![image-20211104213059842](/assets/img/image-20211104213059842.png)
 
 举个例子:
 
