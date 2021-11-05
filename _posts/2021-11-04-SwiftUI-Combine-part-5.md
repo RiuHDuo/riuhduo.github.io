@@ -1,20 +1,18 @@
 ---
 layout: post
 
-title: SwiftUI学习(7)-Combine入门Part V-Reducing Elements Operators
+title: SwiftUI学习(7)-Combine入门Part V-Reducing Elements&Applying Mathematical&Applying Macthing Criteria Operators
 
 date: 2021-11-04 10:01:20 +0800
 
-description: Combine使用基础之-Reducing Elements Operators。
+description: Combine使用基础之-元素减少&数学运算&规则匹配。
 
 img: swiftui_logo.png # Add image post (optional)
 
 fig-caption: # Add figcaption (optional)
 
 tags: [SwiftUI]
-
 ---
-
 > **コニクマル**撰写
 >
 > 本文使用目前最新版本的 xcode 13 + macOS Monterey + iOS15
@@ -287,5 +285,143 @@ input.send(completion: .finished)
 ```swift
 Received Value  6
 Completed  finished
+```
+
+## 数学运算(Applying Mathematical)
+
+### count
+
+统计`Publisher`发布的事件元素数量，当收到finish事件后发布收到的事件元素数量。
+
+比如统计收到的元素数量：
+
+```swift
+var store = Set<AnyCancellable>()
+
+let input = PassthroughSubject<Int, TestError>()
+let output = PassthroughSubject<Int, TestError>()
+
+input.count().subscribe(output).store(in: &store)
+output.sink(receiveCompletion: {print("Complete", $0)}, receiveValue: {print("Received Value", $0)}).store(in: &store)
+
+input.send(1)
+input.send(2)
+input.send(3)
+input.send(4)
+input.send(5)
+input.send(completion: .finished)
+```
+
+输出:
+
+```Swift
+Received Value 5
+Complete finished
+```
+
+### max/min
+
+统计`Publisher`发布的事件元素中的最大/小值，当收到finish事件后发布收到的事件的最大/小值。
+
+> max/min无参数版本只能支持继承 `Comparable`协议的`Output`类型
+
+如果`Output`数据类型没有继承`Comparable`可以使用带有闭包的版本，通过闭包比较元素的大小。
+
+比如统计`Input`发送元素的最小值:
+
+```swift
+
+var store = Set<AnyCancellable>()
+
+let input = PassthroughSubject<Int, TestError>()
+let output = PassthroughSubject<Int, TestError>()
+
+input.min().subscribe(output).store(in: &store)
+output.sink(receiveCompletion: {print("Complete", $0)}, receiveValue: {print("Received Value", $0)}).store(in: &store)
+
+input.send(1)
+input.send(2)
+input.send(3)
+input.send(4)
+input.send(5)
+input.send(completion: .finished)
+```
+
+输出:
+
+```swift
+Received Value 1
+Complete finished
+```
+
+### tryMax/Min(by: (Output, Output) throws ->  Bool)
+
+和`max/min(by: (Output, Output)->Bool)`一样，只不过闭包里可以跑出错误。
+
+## 规则匹配(Applying Matching Criteria)
+
+### contains/tryContains
+
+判断`Publisher`发布的事件元素中是否包含指定的元素或者规则，当收到finish事件后发布true/false表示是否包含。
+
+> 无参数版本只能支持继承 ``Equatable`协议的`Output`类型
+
+如果`Output`数据类型没有继承`Equatable`可以使用带有闭包的版本，通过闭包来判断元素是否符合规则。tryContains可以在传入的闭包里添加throw异常。
+
+比如判断是否有大于3的元素:
+
+```swift
+var store = Set<AnyCancellable>()
+
+let input = PassthroughSubject<Int, TestError>()
+let output = PassthroughSubject<Bool, TestError>()
+
+input.contains(where: {$0 > 3}).subscribe(output).store(in: &store)
+output.sink(receiveCompletion: {print("Complete", $0)}, receiveValue: {print("Received Value", $0)}).store(in: &store)
+
+input.send(1)
+input.send(2)
+input.send(3)
+input.send(4)
+input.send(5)
+input.send(completion: .finished)
+```
+
+输出:
+
+```Swift
+Received Value true
+Complete finished
+```
+
+### allSatisfy/tryAllSatisfy
+
+判读`Publisher`发出的元素是不是全部满足传入闭包的里的规则，如果当收到finish后,之前闭包返回的值全是true则发送出true。`tryAllSatisfy`可以在闭包里跑出异常。
+
+比如判读发送的数据是不是都是2的倍数：
+
+```swift
+var store = Set<AnyCancellable>()
+
+let input = PassthroughSubject<Int, TestError>()
+
+let output = PassthroughSubject<Bool, TestError>()
+
+input.allSatisfy({$0 % 2  == 0}).subscribe(output).store(in: &store)
+output.sink(receiveCompletion: {print("Complete", $0)}, receiveValue: {print("Received Value", $0)}).store(in: &store)
+
+input.send(2)
+input.send(4)
+input.send(8)
+input.send(6)
+input.send(10)
+input.send(completion: .finished)
+```
+
+输出:
+
+```swift
+Received Value true
+Complete finished
 ```
 
