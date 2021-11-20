@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: SwiftUI学习(7)-Combine入门Part II-Subscriber
+title: SwiftUI学习(8)-Combine入门Part II-Subscriber
 
 date: 2021-10-24 10:01:20 +0800
 

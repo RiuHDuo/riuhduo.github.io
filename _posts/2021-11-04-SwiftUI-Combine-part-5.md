@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: SwiftUI学习(7)-Combine入门Part V-Reducing Elements Operators
+title: SwiftUI学习(1)-Combine入门Part V-Reducing Elements Operators
 
 date: 2021-11-04 10:01:20 +0800
 

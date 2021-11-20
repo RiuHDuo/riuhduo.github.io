@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: SwiftUI学习(7)-Combine入门Part III-Subject&AnyPublisher&Cancellable
+title: SwiftUI学习(9)-Combine入门Part III-Subject&AnyPublisher&Cancellable
 
 date: 2021-10-25 10:01:20 +0800
 
