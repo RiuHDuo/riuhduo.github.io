@@ -2,7 +2,7 @@
 layout: post
 
 
-title: SwiftUI学习(7)-Combine入门Part V-Reducing Elements&Applying Mathematical&Applying Macthing Criteria Operators
+title: SwiftUI学习(11)-Combine入门Part V-Reducing Elements&Applying Mathematical&Applying Macthing Criteria Operators
 
 date: 2021-11-04 10:01:20 +0800
 
