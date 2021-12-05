@@ -2,13 +2,13 @@
 layout: post
 title: SwiftUI学习(6)-SwiftUI动画入门Part3
 date: 2021-12-04 20:01:20 +0800
-description: Shap动画。
+description: 给自定义Shape添加动画
 img: swiftui_logo.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [SwiftUI]
 ---
 
-# SwiftUI动画入门Part 3-自定义Shape动画
+# SwiftUI动画入门Part 3-给自定义Shape添加动画
 
 ![Kapture 2021-12-05 at 16.46.05](/assets/img/Kapture 2021-12-05 at 16.46.05.gif)
 
@@ -120,5 +120,5 @@ var animatableData: CGFloat{
 
 运行效果就如一开始那样:
 
-![Kapture 2021-12-05 at 16.46.05](assets/img/Kapture 2021-12-05 at 16.46.05.gif)
+![Kapture 2021-12-05 at 16.46.05](/assets/img/Kapture 2021-12-05 at 16.46.05.gif)
 
