@@ -10,7 +10,7 @@ tags: [SwiftUI]
 
 # SwiftUI动画入门Part 3-给自定义Shape添加动画
 
-![Kapture 2021-12-05 at 16.46.05](/assets/img/Kapture 2021-12-05 at 16.46.05.gif)
+![Kapture 2021-12-05 at 16.46.05](/assets/img/Kapture-2021-12-05-16-46-05.gif)
 
 本文将介绍如何绘制上图中的正弦波动画。
 
@@ -120,5 +120,4 @@ var animatableData: CGFloat{
 
 运行效果就如一开始那样:
 
-![Kapture 2021-12-05 at 16.46.05](/assets/img/Kapture 2021-12-05 at 16.46.05.gif)
-
+![Kapture 2021-12-05 at 16.46.05](/assets/img/Kapture-2021-12-05-16-46-05.gif)
