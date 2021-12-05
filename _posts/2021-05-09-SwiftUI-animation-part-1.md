@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SwiftUI学习(6)-SwiftUI动画入门上
+title: SwiftUI学习(6)-SwiftUI动画入门Part1
 date: 2021-04-28 20:01:20 +0800
 description: 介绍SwitfUI基本动画的使用。
 img: swiftui_logo.png # Add image post (optional)
