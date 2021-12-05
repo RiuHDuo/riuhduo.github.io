@@ -10,7 +10,7 @@ tags: [SwiftUI]
 
 # SwiftUI动画入门Part 3-自定义Shape动画
 
-![Kapture 2021-12-05 at 16.46.05](assets/img/Kapture 2021-12-05 at 16.46.05.gif)
+![Kapture 2021-12-05 at 16.46.05](/assets/img/Kapture 2021-12-05 at 16.46.05.gif)
 
 本文将介绍如何绘制上图中的正弦波动画。
 
@@ -59,7 +59,7 @@ struct WaveShape: Shape{
 
 得到一个静态正弦波页面:
 
-![image-20211205170714819](assets/img/image-20211205170649846.png)
+![image-20211205170714819](/assets/img/image-20211205170649846.png)
 
 ## 给正弦波添加动画
 
